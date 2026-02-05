@@ -35,9 +35,9 @@ namespace BringIntoViewNET
             this.WindowTitel = "Minimal WPF Template";
             WeakEventManager<Window, RoutedEventArgs>.AddHandler(this, "Loaded", this.OnLoaded);
 
-            List.RequestBringIntoView += ListRequestBringToView;
+            this.List.RequestBringIntoView += ListRequestBringToView;
 
-            DataContext = new[]
+            this.DataContext = new[]
             {
                 Tuple.Create("John", new SolidColorBrush(Colors.Fuchsia)),
                 Tuple.Create("Ryan", new SolidColorBrush(Colors.LawnGreen)),
